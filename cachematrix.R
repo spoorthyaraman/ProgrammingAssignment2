@@ -19,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
     get <- function() x
     
     ##this functions sets the inverse of a given matrix x into m
-    setmatrixinv <- function(solve) m <<- solve
+    setmatrixinv <- function(x) m <<- solve(x)
     
     ##this function gets the computed inverted matrix
     getmatrixinv <- function() m
@@ -27,7 +27,7 @@ makeCacheMatrix <- function(x = matrix()) {
     ##finally a list containing the 4 functions is returned
     list(set = set, get = get,
              setmatrixinv = setmatrixinv,
-             getmatrix = getmatrixinv)
+             getmatrixinv = getmatrixinv)
 
 }
 
